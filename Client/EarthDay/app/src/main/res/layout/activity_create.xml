@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateActivity">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/topdiv2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="8"
+            android:background="@color/colorSky" />
+
+        <EditText
+            android:id="@+id/textgrpcodename"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorEarth"
+            android:inputType="none"
+            android:text="@string/text_setgroupcodename"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+        <View
+            android:id="@+id/middiv2b"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="2"
+            android:background="@color/colorDirt" />
+
+        <Button
+            android:id="@+id/btnstart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorEarth"
+            android:onClick="functionStartGroup"
+            android:text="@string/btn_setgroupcodename"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@android:color/black" />
+
+        <View
+            android:id="@+id/btmdiv2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="8"
+            android:background="@color/colorSky" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

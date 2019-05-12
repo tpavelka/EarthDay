@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.earthday"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="27" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/appname"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.earthday.MainActivity"
+            android:label="@string/appname" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.earthday.CreateActivity"
+            android:label="@string/appname" >
+        </activity>
+        <activity
+            android:name="com.earthday.SetUserActivity"
+            android:label="@string/appname" >
+        </activity>
+        <activity
+            android:name="com.earthday.JoinActivity"
+            android:label="@string/appname" >
+        </activity>
+        <activity
+            android:name="com.earthday.ManageActivity"
+            android:label="@string/appname"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.earthday.GroupActivity"
+            android:label="@string/appname"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.earthday.AboutActivity"
+            android:label="@string/appname" >
+        </activity>
+    </application>
+
+</manifest>

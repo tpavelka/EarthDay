@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.earthday">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/appname"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/appname">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".CreateActivity"
+            android:label="@string/appname">
+        </activity>
+
+        <activity android:name=".SetUserActivity"
+            android:label="@string/appname">
+        </activity>
+
+        <activity android:name=".JoinActivity"
+            android:label="@string/appname">
+        </activity>
+
+        <activity android:name=".ManageActivity"
+            android:label="@string/appname"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <activity android:name=".GroupActivity"
+            android:label="@string/appname"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <activity android:name=".AboutActivity"
+            android:label="@string/appname">
+        </activity>
+
+    </application>
+
+</manifest>

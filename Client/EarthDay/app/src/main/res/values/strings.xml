@@ -1,0 +1,69 @@
+<resources>
+    <string name="appname">Earth Day</string>
+    <string name="btn_gotosetusercodename">Set User Codename</string>
+    <string name="text_userwarning">Codenames stay the same upon creation.</string>
+    <string name="text_setusercodename">Enter User Codename</string>
+    <string name="btn_setusercodename">Finalize</string>
+    <string name="btn_gotocreategrp">Create a Group</string>
+    <string name="btn_gotojoingrp">Join a Group</string>
+    <string name="text_joingrp">Enter Group Codename</string>
+    <string name="btn_joingrp">Join</string>
+    <string name="dialog_titleactivity">Activity Input Error</string>
+    <string name="dialog_activitymessage">Only a-zA-Z0-9 .!$%^*(){}+;,=_~\t- permitted.</string>
+    <string name="text_setgrpaction">On EarthDay we will ...</string>
+    <string name="btn_setgrpaction">Commit</string>
+    <string name="dialog_notifymessage">Committed Change</string>
+    <string name="dialog_titlenotify"> </string>
+    <string name="text_groupwarning">Group members that create a group leave their previous group!</string>
+    <string name="text_setgroupcodename">Enter Group Codename</string>
+    <string name="btn_setgroupcodename">Create</string>
+    <string name="btn_managegrp">Manage Group</string>
+    <string name="text_joinwarning">Groups of leaders that join other groups are deleted!</string>
+    <string name="btn_statusleader">Status: Leader</string>
+    <string name="btn_grpportal">Group Portal</string>
+    <string name="btn_statusmember">Status: Member</string>
+    <string name="delgrpmessage">Type group name.</string>
+    <string name="btn_deletegrp">Delete Group</string>
+    <string name="btn_earthdayison">Turn off Earth Day</string>
+    <string name="btn_earthdayisoff">Turn on Earth Day</string>
+    <string name="text_isearthday">Today is an Earth Day!</string>
+    <string name="text_notearthday">Today is not an Earth Day.</string>
+    <string name="text_memheader">Members:</string>
+    <string name="earthpicdesc">a picture of the earth</string>
+    <string name="btn_gotoabout">About</string>
+    <string name="text_leavegrp">Type group name</string>
+    <string name="btn_leavegrp">Leave Group</string>
+    <string name="dialog_okay">Okay</string>
+    <string name="dialog_titlealreadyexists">Group Creation Error</string>
+    <string name="dialog_alreadyexists">This group already exists. Please choose another codename.</string>
+    <string name="dialog_titledoesnotexist">Group Join Error</string>
+    <string name="dialog_doesnotexist">This group does not exist. Please choose another codename.</string>
+    <string name="dialog_titleinputerror">Input Error</string>
+    <string name="dialog_inputmessage">Only A-Z a-z 0-9 permitted.</string>
+    <string name="aboutmessage">
+        \n
+        The purpose of this app is to encourage people\n
+        to band together in hopes of changing any negative\n
+        political climate regarding the health of our\n
+        beloved home, Earth.\n
+        \n
+        The developer belives that substantial power resides\n
+        within the student bodies of High Schools due to how\n
+        school systems require students to attend. It may be\n
+        possible that this liability can be taken advantage\n
+        of in hopes of a stand against pollution.\n
+        \n
+        The creator of this app takes no responsibility for\n
+        anything done by this app\'s users. Please everyone\n
+        be smart and stay safe.\n
+        \n
+        https://welovetheearth.org/\n
+        https://climate.nasa.gov/\n
+        \n
+        Trust. Love. Strength.\n
+        \n
+        P.S.\n
+        When a group leader turns on EarthDay, it shows the\n
+        EarthDay image when members go to the group portal.
+    </string>
+</resources>

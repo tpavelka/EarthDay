@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorEarth">#217F1E</color>
+    <color name="colorSky">#1E647F</color>
+    <color name="colorDirt">#4F3900</color>
+</resources>
