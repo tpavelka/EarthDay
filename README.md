@@ -1,6 +1,7 @@
 
 ![](earthday400.png?raw=true "Surreal Earth")
 
+
 # EarthDay Description:
 Users can create and join Earth Day Groups. Groups have an earthday action assigned by the group leader. Group leaders can enable and disable "EarthDay". It is intended for members to carry out the group action when "EarthDay" is enabled.
 
@@ -15,3 +16,6 @@ https://welovetheearth.org/<br>
 https://climate.nasa.gov/
 
 ## Screenshots:
+![](MainMenu.png?raw=true "Main Menu")
+![](EarthDayDisabled.png?raw=true "Earth Day disabled by leader")
+![](EarthDayEnabled.png?raw=true "Earth Day enabled by leader")

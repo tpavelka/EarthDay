@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Client/EarthDay/app/build/generated/source/buildConfig/androidTest/debug"/>
+	<classpathentry kind="src" path="Client/EarthDay/app/build/generated/source/buildConfig/debug"/>
+	<classpathentry kind="src" path="Client/EarthDay/app/src/main/java"/>
+	<classpathentry kind="src" path="Server/src"/>
+	<classpathentry kind="lib" path="Client/EarthDay/gradle/wrapper/gradle-wrapper.jar"/>
+	<classpathentry kind="output" path="Server/bin"/>
+</classpath>
