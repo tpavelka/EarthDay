@@ -8,5 +8,5 @@ This app was created in hopes that youths would stand up to pollution causing gl
 https://play.google.com/store/apps/details?id=com.earthday
 
 ## Related Links:
-https://welovetheearth.org/
+https://welovetheearth.org/ \n
 https://climate.nasa.gov/
