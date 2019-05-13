@@ -4,4 +4,4 @@
 By downloading and or using this application, EarthDay, you agree to the following terms:
 
 #### Terms:<br>
-1) You will not use this service in any offensive or vulgar way.
+You will not use this service in any offensive or vulgar way.
