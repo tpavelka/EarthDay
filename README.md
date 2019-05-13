@@ -17,5 +17,5 @@ https://climate.nasa.gov/
 
 ## Screenshots:
 ![](MainMenu.png "Main Menu")
-![](EarthDayDisabled.png?raw=true "Earth Day disabled by leader")
-![](EarthDayEnabled.png?raw=true "Earth Day enabled by leader")
+![](EarthDayDisabled.png? "Earth Day disabled by leader")
+![](EarthDayEnabled.png? "Earth Day enabled by leader")
