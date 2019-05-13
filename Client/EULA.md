@@ -1,3 +1,7 @@
+
+# EULA
+
 By downloading and or using this application, EarthDay, you agree to the following terms:
 
-1) You will not create offensive and or vulgar codenames.
+#### Terms:<br>
+1) You will not use this service in any offensive or vulgar way.

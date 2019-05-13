@@ -1,5 +1,5 @@
 
-![](earthday400.png?raw=true "Surreal Earth")
+![](markdown/earthday400.png?raw=true "Surreal Earth")
 
 
 # EarthDay Description:
@@ -17,6 +17,6 @@ https://welovetheearth.org/<br>
 https://climate.nasa.gov/
 
 ## Screenshots:
-![](MainMenu.png "Main Menu")
-![](EarthDayDisabled.png? "Earth Day disabled by leader")
-![](EarthDayEnabled.png? "Earth Day enabled by leader")
+![](markdown/MainMenu.png "Main Menu")
+![](markdown/EarthDayDisabled.png? "Earth Day disabled by leader")
+![](markdown/EarthDayEnabled.png? "Earth Day enabled by leader")
