@@ -16,4 +16,6 @@ https://welovetheearth.org/<br>
 https://climate.nasa.gov/
 
 ## Screenshots:
-![](MainMenu.png?raw=true "Main Menu") ![](EarthDayDisabled.png?raw=true "Earth Day disabled by leader") ![](EarthDayEnabled.png?raw=true "Earth Day enabled by leader")
+![](MainMenu.png "Main Menu")
+![](EarthDayDisabled.png?raw=true "Earth Day disabled by leader")
+![](EarthDayEnabled.png?raw=true "Earth Day enabled by leader")
