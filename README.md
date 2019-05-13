@@ -1,5 +1,5 @@
 
-![](markdown/earthday400.png?raw=true "Surreal Earth")
+![](markdown/Earthday400.png?raw=true "Surreal Earth")
 
 
 # EarthDay Description:
