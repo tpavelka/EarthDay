@@ -12,10 +12,11 @@ This app was created in hopes that youths would stand up to the pollution causin
 https://play.google.com/store/apps/details?id=com.earthday
 
 ## Related Links:
+https://austin6486.artstation.com/<br>
 https://welovetheearth.org/<br>
 https://climate.nasa.gov/
 
 ## Screenshots:
-![](MainMenu.png?raw=true "Main Menu")
-![](EarthDayDisabled.png?raw=true "Earth Day disabled by leader")
-![](EarthDayEnabled.png?raw=true "Earth Day enabled by leader")
+![](MainMenu.png "Main Menu")
+![](EarthDayDisabled.png? "Earth Day disabled by leader")
+![](EarthDayEnabled.png? "Earth Day enabled by leader")
