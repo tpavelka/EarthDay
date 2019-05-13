@@ -1,5 +1,12 @@
-# EarthDay
-Users can create and join Earth Day Groups.
+# EarthDay Description:
+Users can create and join Earth Day Groups. Groups have an earthday action assigned by the group leader. Group leaders can enable and disable "EarthDay". It is intended for members to carry out the group action when "EarthDay" is enabled.
 
-## Notes:
-This app was created in a single work week. If you are interested in the Privacy Policy or the EULA, they are in this directory.
+## Vision:
+This app was created in hopes that youths would stand up to pollution causing global warming.
+
+## Google Play Link:
+https://play.google.com/store/apps/details?id=com.earthday
+
+## Related Links:
+https://welovetheearth.org/
+https://climate.nasa.gov/
