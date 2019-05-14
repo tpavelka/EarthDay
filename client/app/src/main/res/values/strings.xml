@@ -1,5 +1,7 @@
 <resources>
     <string name="appname">Earth Day</string>
+    <string name="dialog_titlegroupdeleted">Message</string>
+    <string name="dialog_messagegroupdeleted">Your group was deleted.</string>
     <string name="btn_gotosetusercodename">Set User Codename</string>
     <string name="text_userwarning">Codenames stay the same upon creation.</string>
     <string name="text_setusercodename">Enter User Codename</string>
