@@ -3,6 +3,7 @@ package com.earthday;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -10,6 +11,42 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
     public static String host = ;
     public static int port = ;
+
+    private boolean hasGroup;
+    public synchronized void hasGroup(boolean hasGroup) {
+        this.hasGroup = hasGroup;
+        this.notify();
+    }
+
+    public void launchSetUserCodename(View view) {
+        Intent gotosetusercodename = new Intent(view.getContext(), SetUserActivity.class);
+        startActivity(gotosetusercodename);
+    }
+
+    public void launchCreateGroup(View view) {
+        Intent gotocreategrp = new Intent(view.getContext(), CreateActivity.class);
+        startActivity(gotocreategrp);
+    }
+
+    public void launchManageGroup(View view) {
+        Intent gotomanagegrp = new Intent(view.getContext(), ManageActivity.class);
+        startActivity(gotomanagegrp);
+    }
+
+    public void launchJoinGroup(View view) {
+        Intent gotojoingrp = new Intent(view.getContext(), JoinActivity.class);
+        startActivity(gotojoingrp);
+    }
+
+    public void launchGroupPortal(View view) {
+        Intent gotogroup = new Intent(view.getContext(), GroupActivity.class);
+        startActivity(gotogroup);
+    }
+
+    public void launchAbout(View view) {
+        Intent gotoabout = new Intent(view.getContext(), AboutActivity.class);
+        startActivity(gotoabout);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,7 +110,41 @@ public class MainActivity extends AppCompatActivity {
                 btn_gotojoingrp.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        launchGroupPortal(view);
+                        // get what the phone thinks the groupname was
+                        SharedPreferences data = getApplicationContext().getSharedPreferences("preferences", 0);
+                        String grpcodename = data.getString("groupcodename", null);
+
+                        // test if the users group still exists
+                        synchronized(MainActivity.this) {
+
+                            // assume the group doesnt exist
+                            MainActivity.this.hasGroup = false;
+
+                            // test if the group still exists
+                            NetHasGroup net0 = new NetHasGroup(MainActivity.this, grpcodename);
+                            net0.start();
+
+                            // wait for a response
+                            try {
+                                MainActivity.this.wait(10000);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                        }
+
+                        if(MainActivity.this.hasGroup) {
+                            launchGroupPortal(view);
+                        } else {
+                            // reset data, goto main menu
+                            SharedPreferences.Editor editor = data.edit();
+                            editor.putString("EarthDay", null);
+                            editor.putString("groupcodename", null);
+                            editor.putString("usertype", "none");
+                            editor.commit();
+
+                            Intent gotomain = new Intent(view.getContext(), MainActivity.class);
+                            startActivity(gotomain);
+                        }
                     }
                 });
 
@@ -113,35 +184,5 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }
-    }
-
-    public void launchSetUserCodename(View view) {
-        Intent gotosetusercodename = new Intent(view.getContext(), SetUserActivity.class);
-        startActivity(gotosetusercodename);
-    }
-
-    public void launchCreateGroup(View view) {
-        Intent gotocreategrp = new Intent(view.getContext(), CreateActivity.class);
-        startActivity(gotocreategrp);
-    }
-
-    public void launchManageGroup(View view) {
-        Intent gotomanagegrp = new Intent(view.getContext(), ManageActivity.class);
-        startActivity(gotomanagegrp);
-    }
-
-    public void launchJoinGroup(View view) {
-        Intent gotojoingrp = new Intent(view.getContext(), JoinActivity.class);
-        startActivity(gotojoingrp);
-    }
-
-    public void launchGroupPortal(View view) {
-        Intent gotogroup = new Intent(view.getContext(), GroupActivity.class);
-        startActivity(gotogroup);
-    }
-
-    public void launchAbout(View view) {
-        Intent gotoabout = new Intent(view.getContext(), AboutActivity.class);
-        startActivity(gotoabout);
     }
 }

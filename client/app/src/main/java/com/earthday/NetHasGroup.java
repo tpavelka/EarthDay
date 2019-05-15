@@ -8,7 +8,7 @@ import java.io.PrintWriter;
 import java.net.Socket;
 
 public class NetHasGroup extends Thread {
-    private GroupActivity activity_group;
+    private MainActivity activity;
     private String groupcodename;
 
     @Override
@@ -27,15 +27,15 @@ public class NetHasGroup extends Thread {
             out.println(groupcodename);
 
             boolean hasGroup = Boolean.parseBoolean(in.readLine());
-            activity_group.hasGroup(hasGroup);
+            activity.hasGroup(hasGroup);
 
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public NetHasGroup(GroupActivity activity, String groupcodename) {
-        this.activity_group = activity;
+    public NetHasGroup(MainActivity activity, String groupcodename) {
+        this.activity = activity;
         this.groupcodename = groupcodename;
     }
 }

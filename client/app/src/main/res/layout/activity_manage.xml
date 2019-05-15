@@ -60,10 +60,11 @@
             android:layout_weight="10"
             android:background="@color/colorEarth"
             android:ems="10"
-            android:inputType="textPersonName"
+            android:inputType="textMultiLine"
             android:text="@string/text_setgrpaction"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:scrollHorizontally="false"/>
 
         <Button
             android:id="@+id/btn_grpaction"
