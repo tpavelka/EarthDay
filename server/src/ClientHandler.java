@@ -110,6 +110,14 @@ public class ClientHandler extends Thread {
 				String action = server.database.getAction(groupcodename);
 				out.println(action);
 				
+			} else if(usecase.equals("has a group")) {
+				System.out.println("Request: has group\t@ " + this.reqtime.toString());
+				
+				String groupcodename = this.in.readLine();
+				// see if the group exists
+				boolean hasGroup = server.database.hasGroup(groupcodename);
+				out.println(hasGroup);
+				
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
