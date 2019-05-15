@@ -11,8 +11,59 @@ public class EarthDayDatabase implements Serializable {
 	}
 	public synchronized void addUser(String groupcodename, String usercodename) {
 		Group group = groups.get(groupcodename);
-		group.addUser(usercodename);
+		if(group != null) {
+			group.addUser(usercodename);
+		}
 	}
+	public synchronized boolean hasGroup(String groupcodename) {
+		return this.groups.containsKey(groupcodename);
+	}
+	public synchronized void setEarthDay(String groupcodename, boolean isEarthDay) {
+		Group group = this.groups.get(groupcodename);
+		if(group != null) {
+			group.setEarthDay(isEarthDay);
+		}
+	}
+	public synchronized Boolean copyEarthDay(String groupcodename) {
+		Group group = this.groups.get(groupcodename);
+		if(group != null) {
+			return group.copyEarthDay();
+		} else {
+			return false;
+		}
+	}
+	public synchronized void removeGroup(String groupcodename) {
+		this.groups.remove(groupcodename);
+	}
+	public synchronized void removeUser(String groupcodename, String usercodename) {
+		Group group = groups.get(groupcodename);
+		if(group != null) {
+			group.removeUser(usercodename);
+		}
+	}
+	public synchronized ArrayList<String> copyMembers(String groupcodename) {
+		Group group = groups.get(groupcodename);
+		if(group != null) {
+			return group.copyUsers();
+		} else {
+			return new ArrayList<String>();
+		}
+	}
+	public synchronized void setAction(String groupcodename, String action) {
+		Group group = groups.get(groupcodename);
+		if(group != null) {
+			group.setAction(action);
+		}
+	}
+	public synchronized String getAction(String groupcodename) {
+		Group group = groups.get(groupcodename);
+		if(group != null) {
+			return group.copyAction();
+		} else {
+			return "";
+		}
+	}
+	
 	public synchronized HashMap<String, Group> copyGroups() {
 		HashMap<String, Group> copy = new HashMap<String, Group>();
 		this.groups.forEach(new BiConsumer<String, Group>() {
@@ -23,37 +74,6 @@ public class EarthDayDatabase implements Serializable {
 		});
 		return copy;
 	}
-	public synchronized boolean hasGroup(String groupcodename) {
-		return this.groups.containsKey(groupcodename);
-	}
-	public synchronized void setEarthDay(String groupcodename, boolean isEarthDay) {
-		Group group = this.groups.get(groupcodename);
-		group.setEarthDay(isEarthDay);
-	}
-	public synchronized Boolean copyEarthDay(String groupcodename) {
-		Group group = this.groups.get(groupcodename);
-		return group.copyEarthDay();
-	}
-	public synchronized void removeGroup(String groupcodename) {
-		this.groups.remove(groupcodename);
-	}
-	public synchronized void removeUser(String groupcodename, String usercodename) {
-		Group group = groups.get(groupcodename);
-		group.removeUser(usercodename);
-	}
-	public synchronized ArrayList<String> copyMembers(String groupcodename) {
-		Group group = groups.get(groupcodename);
-		return group.copyUsers();
-	}
-	public synchronized void setAction(String groupcodename, String action) {
-		Group group = groups.get(groupcodename);
-		group.setAction(action);
-	}
-	public synchronized String getAction(String groupcodename) {
-		Group group = groups.get(groupcodename);
-		return group.copyAction();
-	}
-	
 	@Deprecated
 	public synchronized void setGroups(HashMap<String, Group> groups) {
 		this.groups = groups;

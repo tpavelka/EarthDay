@@ -29,7 +29,28 @@ public class EarthDayServer {
 	private ServerSocket serversocket;
 	public EarthDayDatabase database;
 	
+	public static void main(String[] args) {
+		new EarthDayServer();
+	}
+	
 	public EarthDayServer() {
+		// add a hook for saving on shutdown
+		Runtime.getRuntime().addShutdownHook(new Thread() {
+			@Override
+			public void run() {
+				System.out.println("Saving Database...");
+				BufferedOutputStream bos;
+				try {
+					bos = new BufferedOutputStream(new FileOutputStream("Database.xml"));
+					encoder = new XMLEncoder(bos);
+					encoder.writeObject(database);
+					encoder.close();
+				} catch (FileNotFoundException e) {
+					e.printStackTrace();
+				}
+			}
+		});
+		
 		// starting the server, get the database
 		try {
 			BufferedInputStream bis = new BufferedInputStream(new FileInputStream("Database.xml"));
@@ -40,9 +61,9 @@ public class EarthDayServer {
 			e1.printStackTrace();
 		}
 		
-		// start the database save timer every 5:00 mins = 300000
+		// start the database save timer every 5:00 mins
 		this.savetimer = new Timer();
-		this.savetimer.scheduleAtFixedRate(new SaveTask(), 20000, 20000);
+		this.savetimer.scheduleAtFixedRate(new SaveTask(), 300000, 300000);
 		
 		try {
 			// max port num is 65535
@@ -63,10 +84,6 @@ public class EarthDayServer {
 				e.printStackTrace();
 			}
 		}
-	}
-	
-	public static void main(String[] args) {
-		new EarthDayServer();
 	}
 	
 	private class SaveTask extends TimerTask {

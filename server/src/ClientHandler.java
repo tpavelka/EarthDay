@@ -81,7 +81,7 @@ public class ClientHandler extends Thread {
 				String groupcodename = this.in.readLine();
 				// see if the group is earth day
 				boolean isearthday = server.database.copyEarthDay(groupcodename);
-				out.println(String.valueOf(isearthday));
+				out.println(isearthday);
 				
 			} else if(usecase.equals("get members")) {
 				System.out.println("Request: get members\t@ " + this.reqtime.toString());
